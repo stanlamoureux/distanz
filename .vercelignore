@@ -1,0 +1,12 @@
+.next
+node_modules
+.tmp-npm-cache
+.tmp-deploy-files.json
+.tmp-deploy-slim.json
+.agents
+.claude
+.cursor
+skills
+.env.local
+scripts
+supabase

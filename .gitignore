@@ -1,0 +1,17 @@
+node_modules
+.next
+out
+.env
+.env.*
+!.env.example
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+.tmp-skills
+.tmp-*
+.vercel
+supabase/.temp
+credentials.json
+*.pem
+*.key
+.cursor

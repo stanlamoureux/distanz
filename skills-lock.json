@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "skills": {
+    "accessibility-auditing": {
+      "source": "spencerpauly/awesome-cursor-skills",
+      "sourceType": "github",
+      "skillPath": "resources/accessibility-auditing/SKILL.md",
+      "computedHash": "ab8a774ca462d011e6abe23d6f424020dbfbb7ad8c62c93f3b18011852650553"
+    },
+    "auditing-performance": {
+      "source": "spencerpauly/awesome-cursor-skills",
+      "sourceType": "github",
+      "skillPath": "resources/auditing-performance/SKILL.md",
+      "computedHash": "f21ce7ea53b9b7f1ebde0e627f0bf4e7d34064ffcce5c42bcc2f3dbf430de3af"
+    },
+    "auto-type-checking": {
+      "source": "spencerpauly/awesome-cursor-skills",
+      "sourceType": "github",
+      "skillPath": "resources/auto-type-checking/SKILL.md",
+      "computedHash": "be8405b0c1575d8cf8832c7d5a823755be1805b56e33825c7e4e36bd9ca6ae9b"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "computedHash": "93f53fd1c0352d3d7ec17b8f73d7351bf76f4821e55d123c9d2abc2c53ba48e4"
+    },
+    "grinding-until-pass": {
+      "source": "spencerpauly/awesome-cursor-skills",
+      "sourceType": "github",
+      "skillPath": "resources/grinding-until-pass/SKILL.md",
+      "computedHash": "8eac9ac47e4eb93f0ac5b7ac396b918be02ac20b960e7456b6540bad02bef1de"
+    },
+    "responsive-testing": {
+      "source": "spencerpauly/awesome-cursor-skills",
+      "sourceType": "github",
+      "skillPath": "resources/responsive-testing/SKILL.md",
+      "computedHash": "9e40d1dbcad8514389f95725ad59a8e4c013b9db80903a66220050ab4d3b7819"
+    },
+    "seo-auditing": {
+      "source": "spencerpauly/awesome-cursor-skills",
+      "sourceType": "github",
+      "skillPath": "resources/seo-auditing/SKILL.md",
+      "computedHash": "3fab77832fe4885054067add4c2f3d1059b7ac3c566fbaf1466665b4d3e82484"
+    },
+    "using-ui-stack": {
+      "source": "spencerpauly/awesome-cursor-skills",
+      "sourceType": "github",
+      "skillPath": "resources/using-ui-stack/SKILL.md",
+      "computedHash": "d28563cd61bc64393bcdfb8aab20ed0a79849efa9183c1e373151cb1c638c1c9"
+    },
+    "vercel-composition-patterns": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/composition-patterns/SKILL.md",
+      "computedHash": "575757e3e25761c8c562d6e395d29f0b76c98b1273c0bd72d88e6ab1bc9c7d42"
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "computedHash": "ca7b0c0c6e5f2750043f7f0cd72d16ac4e2abc48f9b5500d047a4b77a2506212"
+    },
+    "visual-qa-testing": {
+      "source": "spencerpauly/awesome-cursor-skills",
+      "sourceType": "github",
+      "skillPath": "resources/visual-qa-testing/SKILL.md",
+      "computedHash": "fdac81ef9adb898cfacf5251da637f2986b4f09300dc43c708cc611cb09c7685"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "computedHash": "f3bc47f890f42a44db1007ab390709ec368e4b8c089baee6b0007182236ac474"
+    },
+    "writing-copy": {
+      "source": "spencerpauly/awesome-cursor-skills",
+      "sourceType": "github",
+      "skillPath": "resources/writing-copy/SKILL.md",
+      "computedHash": "824331469d3f99b0120f004e93012fb3fcaf034f083f3dbb880a4ada06ee6f25"
+    }
+  }
+}

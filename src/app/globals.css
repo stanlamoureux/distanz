@@ -1,0 +1,331 @@
+@import "tailwindcss";
+
+@theme {
+  --color-void: #050506;
+  --color-ink: #0b0c0e;
+  --color-elevated: #14161a;
+  --color-line-dark: #3d414c;
+  --color-paper: #f4f0e6;
+  --color-paper-2: #e8e3d4;
+  --color-line-light: #6e6c64;
+  --color-volt: #c8f542;
+  --color-volt-hover: #d4ff5c;
+  --color-volt-pressed: #a8d62e;
+  --color-ink-muted: #b7b3a8;
+  --color-paper-muted: #3f3d39;
+  --color-danger: #ff6b5a;
+  --color-danger-paper: #7a1e14;
+
+  --font-display: var(--font-big-shoulders);
+  --font-sans: var(--font-figtree);
+  --font-mono: var(--font-ibm);
+
+  --spacing-section: 6rem;
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-slow-zoom: slow-zoom 28s ease-in-out alternate infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-scan: scan 3.2s ease-in-out infinite;
+  --animate-aurora: aurora 18s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 3.6s ease-in-out infinite;
+  --animate-drift: drift 22s ease-in-out infinite;
+  --animate-find-sheen: find-sheen 2.8s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slow-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes scan {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scaleX(0.2);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes aurora {
+  0%,
+  100% {
+    transform: translate3d(-10%, -6%, 0) scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translate3d(12%, 8%, 0) scale(1.18);
+    opacity: 0.9;
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(200 245 66 / 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgb(200 245 66 / 0);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(1.4deg);
+  }
+}
+
+@keyframes find-sheen {
+  from {
+    background-position: 140% 0;
+  }
+  to {
+    background-position: -40% 0;
+  }
+}
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  .reveal.is-in,
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes cue-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes cue-arrow {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(8px);
+    }
+  }
+
+  .select-cue {
+    animation: cue-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .select-cue-arrow {
+    animation: cue-arrow 1.4s ease-in-out infinite;
+  }
+
+  @keyframes menu-in {
+    from {
+      opacity: 0;
+      transform: translateX(-16px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .float-dock {
+    isolation: isolate;
+  }
+
+  html[data-menu-open="true"] .float-dock {
+    display: none;
+  }
+
+  .use-card,
+  .cta-card {
+    isolation: isolate;
+    height: 100%;
+  }
+
+  .find-chair {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .find-chair:not(.is-found) {
+    animation: pulse-glow 2.4s ease-in-out infinite;
+  }
+
+  .find-chair:not(.is-found)::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      110deg,
+      transparent 35%,
+      rgb(200 245 66 / 0.35) 50%,
+      transparent 65%
+    );
+    background-size: 220% 100%;
+    animation: find-sheen 2.8s ease-in-out infinite;
+  }
+
+  .grain {
+    position: relative;
+  }
+
+  .grain::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    opacity: 0.14;
+    mix-blend-mode: overlay;
+    background-image: radial-gradient(rgb(244 240 230 / 0.18) 0.6px, transparent 0.6px);
+    background-size: 3px 3px;
+  }
+
+  .animate-volt-sheen {
+    background: linear-gradient(
+      110deg,
+      transparent 40%,
+      rgb(200 245 66 / 0.18) 50%,
+      transparent 60%
+    );
+    background-size: 220% 100%;
+    animation: sheen 4.5s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .cta-card {
+      transition:
+        transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.35s ease,
+        background-color 0.35s ease,
+        color 0.35s ease;
+    }
+
+    .cta-card:hover {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes sheen {
+    from {
+      background-position: 120% 0;
+    }
+    to {
+      background-position: -20% 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal.is-in {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    .animate-volt-sheen,
+    .motion-safe\:animate-slow-zoom,
+    .motion-safe\:animate-float,
+    .motion-safe\:animate-marquee,
+    .motion-safe\:animate-scan,
+    .motion-safe\:animate-aurora,
+    .motion-safe\:animate-pulse-glow,
+    .motion-safe\:animate-drift,
+    .find-chair:not(.is-found),
+    .select-cue,
+    .select-cue-arrow {
+      animation: none !important;
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+  }
+
+  a {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-volt);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-volt);
+    color: var(--color-ink);
+  }
+
+  details > summary {
+    list-style: none;
+  }
+
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+}
